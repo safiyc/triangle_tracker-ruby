@@ -18,4 +18,8 @@ require 'pry'
       expect(test_triangle.triangle?()).to(eq("This is an isosceles triangle."))
     end
 
+    it("returns scalene if no sides are equal") do
+      test_triangle = Triangle.new(208, 203, 145)
+      expect(test_triangle.triangle?()).to(eq("This is a scalene triangle."))
+    end
   end
